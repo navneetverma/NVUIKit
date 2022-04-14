@@ -8,6 +8,5 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => 'https://github.com/navneetverma/NVUIKit.git', :tag => 'main' }
   spec.source_files = 'Sources/NVUIKit/**/*'
   spec.ios.deployment_target = "13.0"
-  spec.dependency 'GooglePlaces'
 
 end
