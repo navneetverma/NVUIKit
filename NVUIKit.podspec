@@ -27,7 +27,7 @@ s.source = { :git => "https://github.com/navneetverma/NVUIKit.git",
 s.framework = "UIKit"
 
 # 8
-s.source_files = "NVUIKit/**/*.{swift}"
+s.source_files = "Sources/NVUIKit/**/*.{swift}"
 
 # 9
 s.swift_version = "4.2"
