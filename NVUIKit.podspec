@@ -5,7 +5,9 @@ Pod::Spec.new do |spec|
   spec.homepage     = 'https://github.com/navneetverma'
   spec.authors      = { 'Navneet Verma' => 'nverma989@gmail.com' }
   spec.summary      = 'A reusable ui framework.'
-  spec.source       = { :git => 'https://github.com/navneetverma/NVUIKit.git', :tag => 'v0.0.1' }
+  spec.source       = { :git => 'https://github.com/navneetverma/NVUIKit.git', :tag => 'master' }
   spec.source_files = 'Sources/NVUIKit/**/*'
-  spec.framework    = 'UIKit'
+  spec.ios.deployment_target = "9.0"
+  spec.dependency 'BonMot'
+
 end
