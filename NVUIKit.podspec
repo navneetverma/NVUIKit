@@ -30,9 +30,6 @@ s.framework = "UIKit"
 s.source_files = "NVUIKit/**/*.{swift}"
 
 # 9
-s.resources = "RWPickFlavor/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
-
-# 10
 s.swift_version = "4.2"
 
 end
