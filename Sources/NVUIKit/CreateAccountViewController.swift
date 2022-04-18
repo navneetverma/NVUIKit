@@ -17,14 +17,12 @@ public class CreateAccountViewController: UIViewController, UITextFieldDelegate,
     private enum Constants {
         static let title = "Let's get started"
         static let firstName = "First Name"
-        static let lastName = "CreateAccount.lastName".localized()
-        static let email = "CreateAccount.email".localized()
-        static let password = "CreateAccount.password".localized()
-        static let confirmPassword = "CreateAccount.confirmPassword".localized()
-        static let phone = "CreateAccount.phone".localized()
-        static let dob = "CreateAccount.dob".localized()
-        static let phonePlaceholder = "CreateAccount.phone.placeholder".localized()
-        static let dobPlaceholder = "CreateAccount.dob.placeholder".localized()
+        static let lastName = "Last Name"
+        static let email = "Email".localized()
+        static let password = "Password"
+        static let confirmPassword = "Confirm Password"
+        static let phone = "Phone"
+        static let phonePlaceholder = "1234567890"
     }
     
     public enum ValidRegEx: String {
@@ -177,23 +175,6 @@ public class CreateAccountViewController: UIViewController, UITextFieldDelegate,
     }()
     
     
-    lazy var dobTextField: HCInputField = {
-        let inputField =  HCInputField(title: Constants.dob,
-                                       placeholder: Constants.dobPlaceholder,
-                                       isSecureEntry: false)
-        inputField.textField.keyboardType = .numberPad
-        inputField.appearance = HCInputFieldAppearance(visibleIcon: UIImage(named: "show"),
-                                                       invisibleIcon: UIImage(named: "hide"))
-        inputField.textValidationBlock = { [weak self] (text) -> Result<Void, Error> in
-            guard let self = self else { return .success(()) }
-            if !(text?.isEmpty ?? false) && ((text?.hasOnlySpace()) != nil)  {
-                return .success(())
-            } else {
-                return .failure(ValidationError.invalidDate)
-            }
-        }
-        return inputField
-    }()
     
     var isButtonEnabled: Bool = false {
         willSet(newValue) {
@@ -259,7 +240,6 @@ public class CreateAccountViewController: UIViewController, UITextFieldDelegate,
         let stackView = UIStackView(arrangedSubviews: [titleLabel,
                                                        firstNameTextField,
                                                        lastNameTextField,
-                                                       dobTextField,
                                                        phoneTextField,
                                                        emailTextField,
                                                        picker,
@@ -293,20 +273,20 @@ public class CreateAccountViewController: UIViewController, UITextFieldDelegate,
     public var selectedOption = ""
     weak var delegate: AddButtonDidClickProtocol?
     
-    public init(screenTitle: String?,
-         firstNameFieldTitle: String?,
-         lastNameFieldTitle: String?,
-         emailFieldTitle: String?,
-         passwordFieldTitle: String?,
-         confirmPasswordFieldTitle: String?,
-         phoneFieldTitle: String?,
-         dobFieldTitle: String?,
-         pickerTitle: String?,
-         pickerOptions: [String]?,
-         downArrowImage: UIImage?,
-         upArrowImage: UIImage?,
-         showPasswordImage: UIImage?,
-         hidePasswordImage: UIImage?) {
+    public init(screenTitle: String? = nil,
+         firstNameFieldTitle: String? = nil,
+         lastNameFieldTitle: String? = nil,
+         emailFieldTitle: String? = nil ,
+         passwordFieldTitle: String? = nil,
+         confirmPasswordFieldTitle: String? = nil,
+         phoneFieldTitle: String? = nil,
+         dobFieldTitle: String? = nil,
+         pickerTitle: String? = nil,
+         pickerOptions: [String]? = nil,
+         downArrowImage: UIImage? = nil,
+         upArrowImage: UIImage? = nil,
+         showPasswordImage: UIImage? = nil,
+         hidePasswordImage: UIImage? = nil) {
         self.screenTitle = screenTitle
         firstNameTitle = firstNameFieldTitle
         lastNameTitle = lastNameFieldTitle
