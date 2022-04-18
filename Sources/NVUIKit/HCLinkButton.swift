@@ -24,7 +24,15 @@ public class HCLinkButton: UIButton {
     }
     
     func addAction(for controlEvents: UIControl.Event = .touchUpInside, _ closure: @escaping()->()) {
-        addAction(UIAction { (action: UIAction) in closure() }, for: controlEvents)
+        if #available(iOS 13.0, *) {
+            if #available(iOS 14.0, *) {
+                addAction(UIAction { (action: UIAction) in closure() }, for: controlEvents)
+            } else {
+                // Fallback on earlier versions
+            }
+        } else {
+            // Fallback on earlier versions
+        }
     }
 }
 extension UIButton {

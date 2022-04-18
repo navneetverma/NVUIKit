@@ -329,7 +329,7 @@ public class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     func dobiometric() {
-        LocalAuthenticationManager.authenticateBioMetrics(reason: "") { [weak self] (result) in
+        /*LocalAuthenticationManager.authenticateBioMetrics(reason: "") { [weak self] (result) in
             switch result {
             case .success( _):
                 UserDefaults.standard.set(true, forKey: "isBioMetricEnabled")
@@ -344,7 +344,7 @@ public class LoginViewController: UIViewController, UITextFieldDelegate {
                     UserDefaults.standard.set(false, forKey: "isBioMetricEnabled")
                 }
             }
-        }
+        }*/
     }
 
     func showAuthenticationWarning(message: String) {
@@ -355,7 +355,11 @@ public class LoginViewController: UIViewController, UITextFieldDelegate {
         )
         alert.addAction(.init(title: "Settings", style: .default) {
             _ in
-            UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+            } else {
+                // Fallback on earlier versions
+            }
         })
         alert.addAction(.init(title: "Cancel", style: .cancel))
         present(alert, animated: true)
