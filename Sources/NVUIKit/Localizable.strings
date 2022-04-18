@@ -1,0 +1,75 @@
+/*
+  Localizable.strings
+  HealthcareIP
+
+  Created by Navneet.verma on 2/16/22.
+  
+*/
+CreateAccount.title = "Let's get started";
+CreateAccount.firstName = "First Name";
+CreateAccount.lastName = "Last Name";
+CreateAccount.email = "Email";
+CreateAccount.password = "Password";
+CreateAccount.confirmPassword = "Confirm Password";
+
+CreateAccount.dob = "Date Of Birth";
+CreateAccount.phone = "Mobile Phone Number";
+CreateAccount.email.placeholder = "Email";
+CreateAccount.dob.placeholder = "MM/DD/YYYY";
+CreateAccount.phone.placeholder = "888-888-8888";
+CreateAccount.confirmPassword.placeholder = "Confirm Password";
+
+
+Login.title = "Welcome to GoHealth Urgent Care";
+Login.email = "Email";
+Login.email.placeholder = "Email";
+Login.password = "Password";
+Login.rememberMe = "Remember me";
+Login.enableFaceId = "Enable FaceID";
+Login.login = "Log In";
+Login.createAccount = "Create Account";
+Login.continueAsGuest = "Continue as Guest  >";
+Login.forgotPassword = "Forgot Password";
+Login.error.email = "Enter a valid email";
+Login.error.password = "Password is required";
+
+
+CardView.title = "Greenwich Village";
+CardView.covidTitle = "Covid-19 test";
+CardView.location = " 41 E 8th St, New York";
+CardView.ratings = "4.8";
+CardView.distance = "1.43 mi";
+CardView.beSeenTitle = "Be seen in:";
+CardView.time = "60 - 75min";
+CardView.saveButtonTitle = "Save My Spot";
+
+
+Biometric.noFaceIdEnrolled = "There is no face and passcode enrolled in the device. Please go to Device Settings -> Face ID & Passcode and enroll your face and passcode.";
+Biometric.touchIdAuthentication = "Unlock to access";
+Biometric.noFingerprintEnrolled = "There are no fingerprints and passcode enrolled in the device. Please go to Device Settings -> Touch ID & Passcode and enroll your fingerprint and passcode.";
+Biometric.touchIDAuthenticationFailed = "Touch ID does not recognize your fingerprint. Please try again with your enrolled fingerprint.";
+Biometric.noFaceIdEnrolled = "There is no face and passcode enrolled in the device. Please go to Device Settings -> Face ID & Passcode and enroll your face and passcode.";
+Biometric.faceIDAuthenticationFailed = "Face ID does not recognize your face. Please try again with your enrolled face.";
+
+
+TestResultDetail.title = "Test result";
+TestResultDetail.title1 = "Patient Name";
+TestResultDetail.detail1 = "llia Hoden";
+TestResultDetail.title2 = "Visit Date";
+TestResultDetail.detail2 = "Mar 25, 2021";
+TestResultDetail.title3 = "Visit Time";
+TestResultDetail.detail3 = "3:00 PM";
+TestResultDetail.title4 = "Test Type";
+TestResultDetail.detail4 = "COVID-19";
+TestResultDetail.title5 = "Test Result";
+TestResultDetail.detail5 = "Negative";
+TestResultDetail.viewFullDetailButtonTitle = "View Full Details on Patient Portal";
+TestResultDetail.closeButtonTitle = "Close";
+
+
+TestResultFooter.buttonTitle = "Show more results";
+TestResultFooter.note = "Note: Not all test results are available in our app. For a detail result list, visit your Patient Portal.";
+TestResultFooter.haveQuestion = "Have questions?";
+TestResultFooter.billingFaq = "Billing FAQs";
+TestResultFooter.contactUs = "Contact Us";
+
